@@ -1,0 +1,15 @@
+.login-layout {
+  width: 100vw;
+  height: 100vh;
+  background: url("/images/bg.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-layout__box {
+  background: fade-out(white, .15);
+  padding: $m-size;
+  text-align: center;
+}

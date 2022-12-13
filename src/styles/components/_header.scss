@@ -1,0 +1,13 @@
+.header {
+  background: $dark-blue;
+}
+
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__title {
+  color: white;
+  text-decoration: none;
+}
