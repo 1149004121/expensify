@@ -23,14 +23,23 @@ test('should render EditExpensePage', () => {
 
 test('should handle editExpense', () => {
   wrapper.find('ExpenseForm').prop('onSubmit')(expenses[2]);
-  expect(history.push).toHaveBeenLastCalledWith('/');
   expect(startEditExpense).toHaveBeenLastCalledWith(expenses[2].id, expenses[2]);
+  expect(history.push).toHaveBeenLastCalledWith('/');
 });
 
 test('should handle removeExpense', () => {
   wrapper.find('button').simulate('click');
+  expect(wrapper.state("selected")).toBe(true);
+});
+
+test('should confirm removeExpense', () => {
+  wrapper.find('ConfirmModal').prop('deleteItem')();
+  expect(wrapper.state("selected")).toBe(undefined);
+  expect(startRemoveExpense).toHaveBeenLastCalledWith({ id: expenses[2].id });
   expect(history.push).toHaveBeenLastCalledWith('/');
-  expect(startRemoveExpense).toHaveBeenLastCalledWith({
-    id: expenses[2].id
-  });
+});
+
+test('should confirm reserveExpense', () => {
+  wrapper.find('ConfirmModal').prop('reserveItem')();
+  expect(wrapper.state("selected")).toBe(undefined);
 });

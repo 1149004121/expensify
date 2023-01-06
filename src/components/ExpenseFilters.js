@@ -57,7 +57,6 @@ export class ExpenseFilters extends React.Component {
               showClearDates={true}
               numberOfMonths={1}
               isOutsideRange={() => false}
-              className="input-group__item"
             />
           </div>
         </div>

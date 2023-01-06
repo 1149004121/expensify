@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should hide ConfirmModal 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={0}
+  isOpen={false}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <h3>
+    Are you sure you want to delete?
+  </h3>
+  <div
+    className="choices"
+  >
+    <button
+      className="confirm"
+      onClick={[Function]}
+    >
+      Yes
+    </button>
+    <button
+      className="reserve"
+      onClick={[Function]}
+    >
+      No
+    </button>
+  </div>
+</Modal>
+`;
+
+exports[`should show ConfirmModal 1`] = `
+<Modal
+  ariaHideApp={true}
+  bodyOpenClassName="ReactModal__Body--open"
+  className="modal"
+  closeTimeoutMS={0}
+  isOpen={true}
+  parentSelector={[Function]}
+  portalClassName="ReactModalPortal"
+  shouldCloseOnOverlayClick={true}
+>
+  <h3>
+    Are you sure you want to delete?
+  </h3>
+  <div
+    className="choices"
+  >
+    <button
+      className="confirm"
+      onClick={[Function]}
+    >
+      Yes
+    </button>
+    <button
+      className="reserve"
+      onClick={[Function]}
+    >
+      No
+    </button>
+  </div>
+</Modal>
+`;

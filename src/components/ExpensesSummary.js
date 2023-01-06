@@ -6,13 +6,15 @@ import { connect } from 'react-redux';
 import selectExpenses from '../selectors/expenses';
 import selectExpensesTotal from '../selectors/expenses-total';
 
-export const ExpensesSummary = ({ expenseCount, expenseTotal }) => {
-  const expenseWord = expenseCount === 1 ? 'expense' : 'expenses';
+export const ExpensesSummary = ({ expenseShow, expenseHidden, expenseTotal }) => {
+  const expenseShowWord = expenseShow === 1 ? 'expense' : 'expenses';
+  const expenseHiddenWord = expenseHidden === 1 ? 'expense' : 'expenses';
   const formattedExpensesTotal = numeral(expenseTotal / 100).format('$0,0.00');
   return (
     <div className="page-header">
       <div className="content-container">
-        <h1 className="page-header__title">Viewing <span>{expenseCount}</span> {expenseWord} totalling <span>{formattedExpensesTotal}</span></h1>
+        <h1 className="page-header__title">Viewing <span>{expenseShow}</span> {expenseShowWord} totalling <span>{formattedExpensesTotal}</span></h1>
+        <p><span>{expenseHidden}</span> {expenseHiddenWord} hidden</p>
         <div className="page-header__action">
           <Link to="/create" className="button">Add Expenses</Link>
         </div>
@@ -24,7 +26,8 @@ export const ExpensesSummary = ({ expenseCount, expenseTotal }) => {
 const mapStateToProps = (state) => {
   const visibleExpenses = selectExpenses(state.expenses, state.filters);
   return {
-    expenseCount: visibleExpenses.length,
+    expenseShow: visibleExpenses.length,
+    expenseHidden: state.expenses.length - visibleExpenses.length,
     expenseTotal: selectExpensesTotal(visibleExpenses)
   }
 }

@@ -1,0 +1,16 @@
+.ReactModal__Overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: fade-out($grey, .75);
+  padding: $l-size $m-size;
+  border: 1px solid;
+}
+
+.choices {
+  display: flex;
+  justify-content: space-around;
+}
