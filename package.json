@@ -5,8 +5,7 @@
   "author": "xujiaqi",
   "license": "MIT",
   "engines": {
-    "npm": "6.14.13",
-    "node": "14.17.0"
+    "node": "14.20.1"
   },
   "scripts": {
     "build:dev": "webpack",

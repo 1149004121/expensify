@@ -1,15 +1,86 @@
 .login-layout {
   width: 100vw;
   height: 100vh;
-  background: url("/images/bg.jpg");
-  background-size: cover;
+  background: $dark-blue;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .login-layout__box {
-  background: fade-out(white, .15);
+  width: 400px;
+  color: $off-white;
   padding: $m-size;
   text-align: center;
+}
+
+.sign {
+  display: grid;
+  gap: $l-size;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-auto-columns: 1fr;
+
+  button {
+    background: transparent;
+    color: $off-white;
+    cursor: pointer;
+    height: $xl-size ;
+    font-size: $font-size-large;
+    border-radius: 6px;
+    padding: $s-size;
+    width: 100%;
+
+    svg {
+      margin-right: $s-size;
+      vertical-align: bottom;
+    }
+  }
+
+  button:hover {
+    background: $off-blue;
+  }
+}
+
+.github {
+  border: 1px solid $off-yellow;
+}
+
+.google {
+  border: 1px solid $orange;
+}
+
+.or {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  div {
+    height: 1px;
+    margin-right: 11px;
+    margin-left: 11px;
+    flex: 1 1 0%;
+  }
+
+  .left-line {
+    background-image: linear-gradient(90deg, $dark-grey 35%, $off-white);
+  }
+
+  .right-line {
+    background-image: linear-gradient(90deg, $dark-grey 35%, $off-white);
+    transform: rotate(180deg);
+  }
+}
+
+.log-mes {
+  color: $dark-white;
+}
+
+.redirect {
+  text-decoration: none;
+  color: $off-white;
+  padding: 3px;
+  border: 1px solid $off-white;
+  border-radius: 3px;
+  margin-left: $m-size;
 }

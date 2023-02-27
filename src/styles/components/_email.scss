@@ -1,0 +1,30 @@
+.log-email {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: $m-size;
+
+    input {
+      width: 100%;
+      height: $xl-size;
+      margin-top: 5px;
+      border-radius: 8px;
+      padding-left: $s-size;
+    }
+  }
+
+  button {
+    border-radius: 8px;
+    margin: $s-size 0;
+  }
+
+  span {
+    color: red;
+    font-size: $font-size-small;
+    margin-bottom: $s-size;
+  }
+}

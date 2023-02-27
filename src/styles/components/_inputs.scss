@@ -14,3 +14,7 @@
   @extend .input-text;
   height: 10rem;
 }
+
+input:focus-visible {
+  outline: none;
+}
