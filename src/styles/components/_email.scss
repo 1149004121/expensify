@@ -22,9 +22,19 @@
     margin: $s-size 0;
   }
 
-  span {
-    color: red;
-    font-size: $font-size-small;
-    margin-bottom: $s-size;
-  }
+
+}
+
+.error-mes {
+  color: red;
+  font-size: $font-size-small;
+  margin-top: $s-size;
+  height: $m-size;
+}
+
+.login-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

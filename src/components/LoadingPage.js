@@ -1,7 +1,13 @@
 import React from "react";
 
 export const LoadingPage = () => (
-  <div className="loading">
-    <img className="loading__img" src="/images/loader.gif" />
+  <div className="login-layout">
+    <div className="loadingThree">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
   </div>
 )

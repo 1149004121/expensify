@@ -2,7 +2,6 @@ import React from "react";
 import LoginWithGithub from "./LoginWithGithub";
 import LoginWithGoogle from "./LoginWithGoogle";
 import LoginWithEmail from "./LoginWithEmail";
-import { Link } from "react-router-dom";
 import { connect } from "react-redux";
 
 class SigninPage extends React.Component {
@@ -31,8 +30,8 @@ class SigninPage extends React.Component {
             <div className="right-line"></div>
           </div>
           <LoginWithEmail isLogin={this.state.isLogin} />
-          <span className="log-mes">{this.state.isLogin ? "Need an account?" : "Already have an account?"}</span>
-          <Link to={this.state.isLogin ? "/" : "/login"} className="redirect">{this.state.isLogin ? "Sign up" : "Sign in"}</Link>
+
+
         </div>
       </div>
     )

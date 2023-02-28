@@ -1,5 +1,6 @@
 import React from "react";
 import { firebase } from '../firebase/firebase';
+import { Link } from "react-router-dom";
 
 export default class LoginWithEmail extends React.Component {
   state = {
@@ -57,7 +58,11 @@ export default class LoginWithEmail extends React.Component {
           />
         </div>
         <button className="button">{this.props.isLogin ? "Sign in" : "Complete Sign up"}</button>
-        {this.state.error ? <span>{this.state.error}</span> : null}
+        <span className="login-item">
+          <span className="log-mes">{this.state.isLogin ? "Need an account?" : "Already have an account?"}</span>
+          <Link to={this.props.isLogin ? "/" : "/login"} className="redirect">{this.props.isLogin ? "Sign up" : "Sign in"}</Link>
+        </span>
+        <span className="error-mes">{this.state.error ? this.state.error : ""}</span>
       </form>
     )
   }
