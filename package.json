@@ -4,9 +4,6 @@
   "main": "index.js",
   "author": "xujiaqi",
   "license": "MIT",
-  "engines": {
-    "node": "14.20.1"
-  },
   "scripts": {
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
